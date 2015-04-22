@@ -25,15 +25,12 @@ public class Announcements extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        aNtable = (TableLayout) findViewById(R.id.announceTable);
-        goToCollege = (Button) findViewById(R.id.college);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.announcements);
 
-        for(announcement : Announce) {
-            aNtable.addView(new TableRow())
-        }
+        aNtable = (TableLayout) findViewById(R.id.announceTable);
+        goToCollege = (Button) findViewById(R.id.college);
 
         goToCollege.setOnClickListener(new OnClickListener() {
 
