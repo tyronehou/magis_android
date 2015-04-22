@@ -15,19 +15,8 @@ package com.example.tyronehou.magis_android;
 public class MainActivity extends ActionBarActivity {
 
     Button bLogIn;
-    // = (Button) findViewById(R.id.logIn);
-
-    TextView tUsername;
-    // = (TextView) findViewById(R.id.username);
-    TextView tPassword;
-    // = (TextView) findViewById(R.id.password);
-
-    EditText eUsername;
-    // = (EditText) findViewById(R.id.enterUsername);
-    EditText ePassword;
-    // = (EditText) findViewById(R.id.enterPassword);
-
-
+    TextView tUsername, tPassword;
+    EditText eUsername, ePassword;
 
 
     @Override

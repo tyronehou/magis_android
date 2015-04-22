@@ -5,16 +5,44 @@ package com.example.tyronehou.magis_android;
         import android.support.v7.app.ActionBarActivity;
         import android.view.Menu;
         import android.view.MenuItem;
+        import android.widget.TableLayout;
+        import android.widget.TableRow;
+        import android.view.View.OnClickListener;
+        import android.widget.Button;
         import android.view.View;
 
 /**
  * Created by Adrian on 4/12/2015.
  */
+
 public class Announcements extends ActionBarActivity {
+
+    private String[] Announce = {"1. Boston Marathon Today!", "Application Deadline 5/24/15", "Pep Rally 4/4/15"};
+
+    TableLayout aNtable;
+    Button goToCollege;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        aNtable = (TableLayout) findViewById(R.id.announceTable);
+        goToCollege = (Button) findViewById(R.id.college);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.announcements);
+
+        for(announcement : Announce) {
+            aNtable.addView(new TableRow())
+        }
+
+        goToCollege.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent collegeIntent = new Intent(getApplicationContext(), College.class);
+                startActivity(collegeIntent);
+            }
+        });
     }
 
 
